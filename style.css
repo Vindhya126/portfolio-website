@@ -1,0 +1,379 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root {
+  --primary: #6f1d1b;
+  --secondary: #bb9457;
+  --dark: #432818;
+  --accent: #99582a;
+  --light: #ffe6a7;
+
+  --bg: #ffffff;
+  --text: #222222;
+  --card: #ffffff;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1f1f1f;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: var(--shadow);
+}
+
+nav ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--light);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background: linear-gradient(135deg, var(--primary), var(--dark));
+
+  color: white;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn,
+.btn-outline {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+
+  display: inline-block;
+
+  margin: 0.5rem;
+
+  transition: 0.3s;
+}
+
+.btn {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  font-size: 2rem;
+}
+
+/* =========================
+   SKILLS FLEXBOX
+========================= */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1rem;
+
+  padding: 2rem;
+}
+
+.skill {
+  background: var(--secondary);
+  color: white;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 30px;
+
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 3rem;
+
+  padding: 4rem 2rem;
+
+  text-align: center;
+}
+
+.stats h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+.project-card {
+  background: var(--card);
+
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-preview {
+  max-width: 900px;
+  margin: auto;
+
+  text-align: center;
+
+  padding: 4rem 2rem;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form {
+  max-width: 600px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  padding: 2rem;
+}
+
+input,
+textarea {
+  padding: 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--secondary);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  background: var(--primary);
+  color: white;
+
+  border: none;
+
+  padding: 1rem;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: var(--dark);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  margin-top: 4rem;
+}
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+.theme-btn {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 3.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 4.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
